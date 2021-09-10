@@ -4,6 +4,7 @@ const hamberBtn = document.querySelector('.menu_btn');
 hamberBtn.addEventListener('click', modalShow);
 function modalShow() {
   const modalClass = document.querySelector('.modal');
+  const htmlEl = document.querySelector('html')
 
   modalClass.classList.toggle('active');
   htmlEl.classList.add('scrollstop');
