@@ -12,8 +12,8 @@
     width: 100%;
     height: 100%;
     visibility: visible;
+    z-index: 100;
     opacity: 1;
-    z-index: 2;
     transition: all 0.5s ease-in-out;
   }
   .modal .modal_overlay {
@@ -50,7 +50,7 @@
     cursor: pointer;
   }
   .modal .modal-box .modal-body {
-    height: 50vh;
+    height: auto;
   }
   .modal .modal-box .modal-body ul li {
     padding: 20px;
