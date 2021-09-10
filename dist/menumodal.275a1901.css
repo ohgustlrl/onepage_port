@@ -8,24 +8,37 @@
   .modal {
     position: fixed;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(3, 3, 3, 0.7);
-    opacity: 0;
-    transition: all 1s;
-    
-  }
-  .modal.active {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
     opacity: 1;
-    z-index: 9999;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+  }
+  .modal .modal_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, 0.4);
+  }
+  .modal.hidden {
+    visibility: hidden;
+    opacity: 0;
   }
   .modal .modal-box {
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    width: 80%;
+    transform: translate(-50%, -50%);
+    width: 70%;
     background-color: #fff;
+    border-radius: 10px;
+    border: 10px solid #f5f5dc;
+    box-shadow: 5px 5px 20px #000;
+    box-sizing: border-box;
   }
   .modal .modal-box .modal-header {
     text-align: right;
