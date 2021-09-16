@@ -9,10 +9,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
   <!-- 커스텀 JS CSS -->
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/t_main.css">
+  <link rel="stylesheet" href="./css/p_main.css">
   <link rel="stylesheet" href="./css/menumodal.css">
   <script defer src="./js/main.js"></script>
   <script defer src="./js/common/modal.js"></script>
@@ -20,37 +23,64 @@
 
 </head>
 <body>
-   
+<!-- 모바일용 모달 메뉴 -->
+   <div class="modal hidden">
+    <div class="modal_overlay"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="material-icons modal-close-btn">
+            close
+          </div>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li class="modal_close"><a href="#top">home</a></li>
+            <li class="modal_close"><a href="#introduce">i'am</a></li>
+            <li class="modal_close"><a href="#work">work</a></li>
+            <li class="modal_close"><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
   <div class="wrap">
-    <!-- 헤더 -->
     <!-- <img src="./w2560-g16-m8-grid.png" alt="그리드시스템" class="grid"> -->
+    <!-- 헤더 -->
     <header class="header">
       <div class="inner">
         <a href="/" class="logo"><img src="./images/logo.png" alt="KP logo"></a>
         <div class="material-icons menu_btn">
           menu
         </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="#top" class="menuitem">home</a></li>
+            <li><a href="#introduce" class="menuitem">i'am</a></li>
+            <li><a href="#work" class="menuitem">work</a></li>
+            <li><a href="#contact" class="menuitem">contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <nav class="nav">
-      <div class="inner">
-        <ul>
-          <li><a href="#top">home</a></li>
-          <li><a href="#introduce">i'am</a></li>
-          <li><a href="#work">work</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </div>
-    </nav>
     <section class="intro">
-      <article class="inner">
+      <article class="contents-wrap">
         <h1>KPaul Portfolio Page</h1>
-        <img src="./images/spade.png" alt="ace of spade">
-        <h2>안녕하세요?</h2>
-        <p class="intro-text1">52장의 카드 중 최고의 카드는 에이스 입니다.</p>
-        <p class="intro-text2">그 에이스 카드 중에서도 최고의 카드는 스페이드 에이스 입니다.</p>
-        <p class="intro-text3">앞으로 스페이드 에이스가 되고싶은 신입 개발자</p>
-        <p class="intro-text4">K.Paul 입니다.</p>
+        <div class="inner">
+          <h2>안녕하세요?</h2>
+          <div class="backbg"></div>
+          <div class="intro-text-box">
+            <span class="intro-text1">52장의 카드 중 최고의 카드는 에이스 입니다.</span>
+            <span class="intro-text2">그 에이스 카드 중에서도 최고의 카드는 스페이드 에이스 입니다.</span>
+            <span class="intro-text3">앞으로 스페이드 에이스가 되고싶은 신입 개발자</span>
+            <span class="intro-text4">K.Paul 입니다.</span>
+          </div>
+          <div class="more">
+            <span>Scroll</span>
+            <div class="material-icons" id="scroll">
+              expand_more
+            </div>
+          </div>
+        </div>  
       </article>
     </section>
     <section class="introduce" id="introduce">
@@ -102,26 +132,6 @@
         이 사이트는 포트폴리오의 목적으로 제작 되었습니다.
       </div>
     </footer>
-  </div>
-  <!-- 모바일용 모달 메뉴 -->
-  <div class="modal hidden">
-    <div class="modal_overlay"></div>
-      <div class="modal-box">
-        <div class="modal-header">
-          <div class="material-icons modal-close-btn">
-            close
-          </div>
-        </div>
-        <div class="modal-body">
-          <ul>
-            <li class="modal_close"><a href="#top">home</a></li>
-            <li class="modal_close"><a href="#introduce">i'am</a></li>
-            <li class="modal_close"><a href="#work">work</a></li>
-            <li class="modal_close"><a href="#contact">contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
 </body>
 </html>

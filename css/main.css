@@ -4,8 +4,8 @@
     top: 0;
     width: 100%;
     height: 80px;
-    z-index: 1;
-    background-color: rgba(255, 255, 255, 0.8); 
+    z-index: 3;
+    background-color: rgba( 66, 165, 245, 0.8); 
   }
   .wrap header.bottmshadow {
     box-shadow: 0 2px 10px #333;
@@ -14,11 +14,14 @@
   .wrap header .inner {
     height: 80px;
   }
-  .wrap header .inner .logo img{
+  .wrap header .inner .logo {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 15%;
+  }
+  .wrap header .inner .logo img {
+    display: block;
+    max-width: 40%
   }
   .wrap header .inner .material-icons {
     position: absolute;
@@ -28,7 +31,7 @@
     font-size: 2.625em;
     cursor: pointer;
   }
-  .wrap nav {
+  .wrap .inner .nav {
     display: none;
   }
   .wrap nav ul {
@@ -44,56 +47,78 @@
 
   /* Intro of Section*/
   .intro {
+    position: relative;
     display: block;
     width: 100%;
-    height: 100vh;
-    margin-top: 80px;
-    background-color: #fff;
+    background-color: #fafafa;
   }
-  .intro .inner img {
+  .intro .contents-wrap .inner{
+    padding-top: 150%;
+  }
+  .intro .contents-wrap .inner h2 {
+    display: inline-block;
     position: absolute;
-    max-width: 70%;
-    height: 180%;
-    min-height: 130%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) perspective(160px) rotateX(10deg);
-    box-shadow: 0.5em 0.5em 1em #333;
-    opacity: 0.3;
-  }
-  .intro .inner h2 {
-    position: relative;
-    top: 2em;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5em;
+    width: 100%;
+    top: 0px;
+    font-size: 2em;
     font-weight: 800;
     text-align: center;
     text-shadow: 2px 2px 5px #fff;
+    margin-top: 10px;
   }
-  .intro .inner p {
-    position: relative;
+  .intro .contents-wrap .inner .backbg {
+    position: absolute;
+    width: 80%;
+    min-width: 50%;
+    max-width: 100%;
+    height: 70%;
+    min-height: 50%;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2em;
-    font-weight: 800;
+    background-image: url('../images/spade.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #000;
+    opacity: 0.3;
+    z-index: 1;
+  }
+  .intro .contents-wrap .inner .intro-text-box {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 60px 0;
     text-align: center;
+    z-index: 2;
+  }
+  .intro .contents-wrap .inner .intro-text-box [class*="intro-text"] {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 600;
     color: #333;
-    text-shadow: 1px 1px 0px #fff;
+    text-shadow: 1px 1px 1px #fff;
     word-break: keep-all;
+    padding: 20px 0;
+  }
+  .intro .contents-wrap .inner .intro-text-box .intro-text4 {
+    font-size: 2em;
+    font-weight: 800;
+  }
 
+  .intro .contents-wrap .inner .more {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .intro .inner .intro-text1 {
-    top: 5em;
-  }
-  .intro .inner .intro-text2 {
-    top: 6em;
-  }
-  .intro .inner .intro-text3 {
-    top: 7em;
-  }
-  .intro .inner .intro-text4 {
-    top: 4em;
+  .intro .more .material-icons {
+    padding-bottom: 20px;
     font-size: 3em;
   }
 
@@ -102,19 +127,15 @@
     position: relative;
     display: block;
     width: 100%;
-    background-color: beige;
-  }
-  .introduce .contents-wrap {
-    display: flex;
-    flex-direction: column;
+    background-color: #e0e0e0;
   }
   [class="item-box"] {
     width: 100%;
   }
   [class="item-header"] {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #42a5f5;
     margin: 30px 0;
-    background-color: rgba(3, 3, 3, 0.3);
+    background-color: #80d6ff;
   }
   [class="item-header"] h2 {
     font-weight: 800;
@@ -140,58 +161,51 @@
     display: block;
     width: 77%;
     height: 30%;
-    background-color: #fff;
+    background-color: #0077c2;
+  }
+  [class="item-body"] ul li span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #80d6ff;
   }
   [class="item-body"] ul li:nth-of-type(1) span::before {
-    content: "90%";
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 90%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0.5);
   }
   [class="item-body"] ul li:nth-of-type(2) span::before {
-    content: "80%";
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 80%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0.5);
   }
   [class="item-body"] ul li:nth-of-type(3) span::before {
-    content: "60%";
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 60%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0.5);
+  }
+  [class="item-body"] ul li span::after {
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+  [class="item-body"] ul li:nth-of-type(1) span::after {
+    content: "90%";
+  }
+  [class="item-body"] ul li:nth-of-type(2) span::after {
+    content: "80%";
+  }
+  [class="item-body"] ul li:nth-of-type(3) span::after {
+    content: "60%";
   }
   /* Work of Section */
   .work {
     position: relative;
     display: block;
     width: 100%;
-    background-color: #fff;
-  }
-  .work .inner {
-    height: auto;
+    background-color: #fafafa;
   }
   /* footer */
   footer {
     position: relative;
     display: block;
     width: 100%;
-    background-color: beige;
+    background-color: #fafafa;
   }
-}
-
-@media all and (min-width:768px) {
-
-}
-
-@media all and (min-width:1200px) {
-
 }

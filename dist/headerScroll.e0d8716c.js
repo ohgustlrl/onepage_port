@@ -152,7 +152,58 @@ function hasScrolled() {
   }
 
   lastScrollTop = nowScrollTop;
+} // 메뉴 인디케이터
+
+
+var menuEl = document.querySelectorAll('.menuitem');
+
+function indicator() {
+  var _loop = function _loop(_i) {
+    menuEl[_i].addEventListener('click', function () {
+      menuEl[_i].classList.toggle('show');
+
+      var notShowEl = document.querySelectorAll('.menuitem:not(.show)');
+
+      var _loop2 = function _loop2(j) {
+        notShowEl[j].addEventListener('click', function () {
+          notShowEl[j].classList.add('show');
+
+          menuEl[_i].classList.remove('show');
+        });
+      };
+
+      for (var j = 0; j < notShowEl.length; j++) {
+        _loop2(j);
+      }
+    });
+  };
+
+  for (var _i = 0; _i < menuEl.length; _i++) {
+    _loop(_i);
+  }
+
+  return;
 }
+
+indicator();
+var sectionEl = document.querySelectorAll('section');
+
+function sectionTop() {
+  for (var _i2 in sectionEl) {
+    sectionEl[_i2].offsettop;
+  }
+
+  return;
+}
+
+console.log(sectionEl[i]); // let scrollY = window.scrollY || document.documentElement.scrollTop;
+// if(scrollY === sectionEl[0].offsetTop) {
+//   indicator();
+// } else if(scrollY === sectionEl[1].offsetTop){
+//   indicator();
+// } else if(scrollY === sectionEl[2].offsetTop){
+//   indicator()
+// }
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -181,7 +232,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1418" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10410" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

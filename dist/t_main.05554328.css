@@ -1,0 +1,62 @@
+@media all and (min-width:768px) {
+  .wrap header .inner .logo img {
+    max-width: 50%;
+  }
+  .wrap header .inner .material-icons {
+    display: none;
+  }
+  .wrap .inner .nav {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+  .wrap nav ul li a {
+    position: relative;
+    font-size: 1.3em;
+  }
+  .wrap nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #2286c3;
+    transition: width 0.2s linear;
+  }
+  .wrap nav ul li a:hover::after {
+    width: 100%;
+  }
+  .wrap nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #2286c3;
+    visibility: hidden;
+  }
+  .wrap nav ul li a.show::before {
+    visibility: visible;
+  }
+
+  /* Intro of Section*/
+  .intro .contents-wrap .inner .intro-text-box .intro-text3 {
+    position: relative;
+  }
+  .intro .contents-wrap .inner .intro-text-box .intro-text3::before {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(187, 255, 0, 0.3);
+  }
+}
+
+
+/*# sourceMappingURL=/t_main.05554328.css.map */

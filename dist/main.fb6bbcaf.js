@@ -118,7 +118,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
-
+// 모바일 & 태블릿 스크롤링 애니메이션
+gsap.to("#scroll", {
+  duration: 1,
+  y: 10,
+  opactiy: 0,
+  repeat: -1,
+  ease: "power3"
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +154,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1418" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10410" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

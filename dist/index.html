@@ -8,48 +8,78 @@
   <!-- CDN JS CSS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
   <!-- 커스텀 JS CSS -->
   <link rel="stylesheet" href="/common.b1e2d4b4.css">
   <link rel="stylesheet" href="/main.c52e0fe2.css">
+  <link rel="stylesheet" href="/t_main.05554328.css">
+  <link rel="stylesheet" href="/p_main.ffcc7603.css">
   <link rel="stylesheet" href="/menumodal.275a1901.css">
   <script defer="" src="/main.fb6bbcaf.js"></script>
   <script defer="" src="/modal.bd4c841a.js"></script>
   <script defer="" src="/headerScroll.e0d8716c.js"></script>
 
-<script src="/common.b1e2d4b4.js"></script><script src="/main.c52e0fe2.js"></script><script src="/menumodal.275a1901.js"></script></head>
+<script src="/common.b1e2d4b4.js"></script><script src="/main.c52e0fe2.js"></script><script src="/t_main.05554328.js"></script><script src="/p_main.ffcc7603.js"></script><script src="/menumodal.275a1901.js"></script></head>
 <body>
+<!-- 모바일용 모달 메뉴 -->
+   <div class="modal hidden">
+    <div class="modal_overlay"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="material-icons modal-close-btn">
+            close
+          </div>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li class="modal_close"><a href="#top">home</a></li>
+            <li class="modal_close"><a href="#introduce">i'am</a></li>
+            <li class="modal_close"><a href="#work">work</a></li>
+            <li class="modal_close"><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
    
   <div class="wrap">
-    <!-- 헤더 -->
     <!-- <img src="./w2560-g16-m8-grid.png" alt="그리드시스템" class="grid"> -->
+    <!-- 헤더 -->
     <header class="header">
       <div class="inner">
         <a href="/" class="logo"><img src="/logo.6023b87e.png" alt="KP logo"></a>
         <div class="material-icons menu_btn">
           menu
         </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="#top" class="menuitem">home</a></li>
+            <li><a href="#introduce" class="menuitem">i'am</a></li>
+            <li><a href="#work" class="menuitem">work</a></li>
+            <li><a href="#contact" class="menuitem">contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <nav class="nav">
-      <div class="inner">
-        <ul>
-          <li><a href="#top">home</a></li>
-          <li><a href="#introduce">i'am</a></li>
-          <li><a href="#work">work</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </div>
-    </nav>
     <section class="intro">
-      <article class="inner">
+      <article class="contents-wrap">
         <h1>KPaul Portfolio Page</h1>
-        <img src="/spade.b0cf9b79.png" alt="ace of spade">
-        <h2>안녕하세요?</h2>
-        <p class="intro-text1">52장의 카드 중 최고의 카드는 에이스 입니다.</p>
-        <p class="intro-text2">그 에이스 카드 중에서도 최고의 카드는 스페이드 에이스 입니다.</p>
-        <p class="intro-text3">앞으로 스페이드 에이스가 되고싶은 신입 개발자</p>
-        <p class="intro-text4">K.Paul 입니다.</p>
+        <div class="inner">
+          <h2>안녕하세요?</h2>
+          <div class="backbg"></div>
+          <div class="intro-text-box">
+            <span class="intro-text1">52장의 카드 중 최고의 카드는 에이스 입니다.</span>
+            <span class="intro-text2">그 에이스 카드 중에서도 최고의 카드는 스페이드 에이스 입니다.</span>
+            <span class="intro-text3">앞으로 스페이드 에이스가 되고싶은 신입 개발자</span>
+            <span class="intro-text4">K.Paul 입니다.</span>
+          </div>
+          <div class="more">
+            <span>Scroll</span>
+            <div class="material-icons" id="scroll">
+              expand_more
+            </div>
+          </div>
+        </div>  
       </article>
     </section>
     <section class="introduce" id="introduce">
@@ -102,25 +132,5 @@
       </div>
     </footer>
   </div>
-  <!-- 모바일용 모달 메뉴 -->
-  <div class="modal hidden">
-    <div class="modal_overlay"></div>
-      <div class="modal-box">
-        <div class="modal-header">
-          <div class="material-icons modal-close-btn">
-            close
-          </div>
-        </div>
-        <div class="modal-body">
-          <ul>
-            <li class="modal_close"><a href="#top">home</a></li>
-            <li class="modal_close"><a href="#introduce">i'am</a></li>
-            <li class="modal_close"><a href="#work">work</a></li>
-            <li class="modal_close"><a href="#contact">contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  
 </body>
 </html>
