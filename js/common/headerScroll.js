@@ -51,24 +51,3 @@ for (let i = 0; i < menuEl.length; i++) {
   return
 }
 indicator();
-
-let sectionEl = document.querySelectorAll('section');
-
-function sectionTop(){
-for (let i in sectionEl) {
-  sectionEl[i].offsettop
-  }
-  return
-}
-console.log(sectionEl[i])
-
-
-// let scrollY = window.scrollY || document.documentElement.scrollTop;
-
-// if(scrollY === sectionEl[0].offsetTop) {
-//   indicator();
-// } else if(scrollY === sectionEl[1].offsetTop){
-//   indicator();
-// } else if(scrollY === sectionEl[2].offsetTop){
-//   indicator()
-// }
